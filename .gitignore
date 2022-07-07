@@ -1,0 +1,17 @@
+
+# Editors
+.vscode/
+.idea/
+.vs/
+
+
+# Node modules
+node_modules/
+
+
+# Built files
+build/
+
+
+# Environment files
+*.env

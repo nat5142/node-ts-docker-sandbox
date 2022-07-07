@@ -1,0 +1,21 @@
+
+version: '3.7'
+
+
+services:
+  node-ts-docker-sandbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    volumes:
+      - ./src:/home/node/app/src
+      - ./nodemon.json:/home/node/app/nodemon.json
+    container_name: node-ts-docker-sandbox
+    env_file:
+      - .env
+    expose:
+      - '3000'
+    ports:
+      - '${PORT}:${PORT}'
+    command: npm run dev
